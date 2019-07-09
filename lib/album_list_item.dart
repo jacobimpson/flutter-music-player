@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/album_page.dart';
 import 'classes.dart';
 
 class AlbumListTile extends StatelessWidget {
@@ -16,14 +17,23 @@ class AlbumListTile extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 0.0),
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => AlbumPage(album: album),
+                ),
+              );
+            },
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                Container(
-                  width: 96.0,
-                  height: 96.0,
-                  color: Colors.black26,
+                Hero(
+                  tag: Key(album.title),
+                  child: Container(
+                    width: 96.0,
+                    height: 96.0,
+                    child: Image.asset('images/${album.image}'),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(12.0),
