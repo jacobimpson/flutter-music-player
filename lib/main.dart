@@ -9,28 +9,34 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Music Player Demo',
-      theme: ThemeData(brightness: Brightness.dark),
-      home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
+      home: App(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
-
+class App extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _AppState createState() => _AppState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Albums")),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text(
+          "🍎 Apple Music",
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
       body: ListView.builder(
         itemCount: albums.length,
         itemBuilder: (BuildContext context, int index) {
-          return AlbumListTile(album: albums[index]);
+          return AlbumListTile(
+            album: albums[index],
+          );
         },
       ),
     );
