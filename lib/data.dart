@@ -13,9 +13,13 @@ const List<Album> albums = [
     title: 'Stranger Fruit',
     tracks: <Song>[
       Song(title: 'Example Song', audioFile: 'example.mp3'),
-      Song(title: 'Example Song 2', audioFile: 'example.mp3'),
-      Song(title: 'Example Song 3', audioFile: 'example.mp3'),
-      Song(title: 'Example Song 4', audioFile: 'example.mp3'),
+      Song(title: 'Example Song ', audioFile: 'example.mp3'),
+      Song(title: 'Example Song ', audioFile: 'example.mp3'),
+      Song(title: 'Example Song ', audioFile: 'example.mp3'),
+      Song(title: 'Example Song', audioFile: 'example.mp3'),
+      Song(title: 'Example Song ', audioFile: 'example.mp3'),
+      Song(title: 'Example Song ', audioFile: 'example.mp3'),
+      Song(title: 'Example Song ', audioFile: 'example.mp3'),
     ],
   ),
 ];

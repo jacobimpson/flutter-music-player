@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/album_page.dart';
+import 'package:music_player/album_view.dart';
 import 'classes.dart';
 
 class AlbumListTile extends StatelessWidget {
@@ -18,11 +18,7 @@ class AlbumListTile extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 0.0),
           child: InkWell(
             onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => AlbumPage(album: album),
-                ),
-              );
+              Navigator.of(context).pushNamed(album.title);
             },
             child: Row(
               mainAxisSize: MainAxisSize.max,
