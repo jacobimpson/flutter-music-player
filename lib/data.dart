@@ -1,4 +1,6 @@
-import 'classes.dart';
+import 'models/album.dart';
+import 'models/artist.dart';
+import 'models/song.dart';
 
 const zealAndArdor = Artist(
   name: 'Zeal And Ardor',
@@ -11,7 +13,7 @@ const List<Album> albums = [
     image: 'stranger-fruit.jpg',
     releaseYear: 2018,
     title: 'Stranger Fruit',
-    tracks: <Song>[
+    songs: <Song>[
       Song(title: 'Example Song', audioFile: 'example.mp3'),
       Song(title: 'Example Song ', audioFile: 'example.mp3'),
       Song(title: 'Example Song ', audioFile: 'example.mp3'),

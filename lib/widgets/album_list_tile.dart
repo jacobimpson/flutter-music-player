@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/album_view.dart';
-import 'classes.dart';
+import '../models/album.dart';
 
 class AlbumListTile extends StatelessWidget {
-  const AlbumListTile({
-    Key key,
-    @required this.album,
-  }) : super(key: key);
-
+  const AlbumListTile({@required this.album});
   final Album album;
 
   @override
