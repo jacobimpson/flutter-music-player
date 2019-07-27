@@ -11,7 +11,9 @@ class PlayPauseButton extends StatelessWidget {
           model.mediaControls.isPlaying ? Icons.pause : Icons.play_arrow,
         ),
         onPressed: () {
-          model.mediaControls.isPlaying ? model.pause() : model.play();
+          model.mediaControls.isPlaying
+              ? model.pause()
+              : model.play(model.mediaControls.activeSong);
         },
       ),
     );

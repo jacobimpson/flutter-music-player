@@ -87,9 +87,7 @@ class AlbumView extends StatelessWidget {
                               horizontal: 16.0,
                             ),
                             onTap: () {
-                              if (!model.mediaControls.isPlaying) {
-                                model.play(song);
-                              }
+                              model.play(song);
                             },
                           ),
                         )

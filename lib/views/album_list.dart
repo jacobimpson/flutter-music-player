@@ -14,7 +14,6 @@ class AlbumListView extends StatelessWidget {
       model,
     ) {
       bool hasActiveSong = model.mediaControls.activeSong != null;
-
       return Scaffold(
         floatingActionButton: hasActiveSong ? PlayPauseButton() : null,
         appBar: AppBar(

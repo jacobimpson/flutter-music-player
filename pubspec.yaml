@@ -20,6 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   scoped_model: ^1.0.1
+  audioplayer: ^0.5.2
 
 dev_dependencies:
   flutter_test:

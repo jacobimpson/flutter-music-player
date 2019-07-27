@@ -7,6 +7,9 @@ const zealAndArdor = Artist(
   image: 'example.jpg',
 );
 
+const String demoSongUrl =
+    'https://archive.org/download/testmp3testfile/mpthreetest.mp3';
+
 const List<Album> albums = [
   Album(
     artist: zealAndArdor,
@@ -14,14 +17,14 @@ const List<Album> albums = [
     releaseYear: 2018,
     title: 'Stranger Fruit',
     songs: <Song>[
-      Song(title: 'Example Song', audioFile: 'example.mp3'),
-      Song(title: 'Example Song ', audioFile: 'example.mp3'),
-      Song(title: 'Example Song ', audioFile: 'example.mp3'),
-      Song(title: 'Example Song ', audioFile: 'example.mp3'),
-      Song(title: 'Example Song', audioFile: 'example.mp3'),
-      Song(title: 'Example Song ', audioFile: 'example.mp3'),
-      Song(title: 'Example Song ', audioFile: 'example.mp3'),
-      Song(title: 'Example Song ', audioFile: 'example.mp3'),
+      Song(title: 'Example Song', audioUrl: demoSongUrl),
+      Song(title: 'Example Song ', audioUrl: demoSongUrl),
+      Song(title: 'Example Song ', audioUrl: demoSongUrl),
+      Song(title: 'Example Song ', audioUrl: demoSongUrl),
+      Song(title: 'Example Song', audioUrl: demoSongUrl),
+      Song(title: 'Example Song ', audioUrl: demoSongUrl),
+      Song(title: 'Example Song ', audioUrl: demoSongUrl),
+      Song(title: 'Example Song ', audioUrl: demoSongUrl),
     ],
   ),
 ];

@@ -1,5 +1,5 @@
 class Song {
-  const Song({this.audioFile, this.title});
-  final String audioFile;
+  const Song({this.audioUrl, this.title});
+  final String audioUrl;
   final String title;
 }

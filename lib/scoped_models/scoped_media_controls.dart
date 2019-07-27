@@ -6,18 +6,18 @@ class ScopedMediaControls extends Model {
   MediaControls mediaControls = MediaControls();
 
   play([Song song]) {
+    if (song is Song) {
+      mediaControls.play(song);
+      mediaControls.activeSong = song;
+    }
+
     mediaControls.isPlaying = true;
-    if (song != null) mediaControls.activeSong = song;
     notifyListeners();
   }
 
   pause() {
+    mediaControls.pause();
     mediaControls.isPlaying = false;
-    notifyListeners();
-  }
-
-  setActiveSong(Song song) {
-    mediaControls.activeSong = song;
     notifyListeners();
   }
 }
