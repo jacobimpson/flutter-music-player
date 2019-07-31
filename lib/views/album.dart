@@ -22,7 +22,7 @@ class AlbumView extends StatelessWidget {
         body: CustomScrollView(
           slivers: <Widget>[
             SliverAppBar(
-              expandedHeight: MediaQuery.of(context).size.width - 18.0,
+              expandedHeight: MediaQuery.of(context).size.width - 40.0,
               backgroundColor: Colors.transparent,
               brightness: Brightness.dark,
               iconTheme: IconThemeData(color: Colors.white),
@@ -61,7 +61,7 @@ class AlbumView extends StatelessWidget {
               delegate: SliverChildListDelegate(
                 [
                   Padding(
-                    padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 8.0),
+                    padding: EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -73,7 +73,9 @@ class AlbumView extends StatelessWidget {
                             letterSpacing: -2.0,
                           ),
                         ),
-                        Text("Album by ${album.artist.name}"),
+                        Text(
+                          "Album by ${album.artist.name} • ${album.releaseYear.toString()}",
+                        ),
                       ],
                     ),
                   ),
